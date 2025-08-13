@@ -1,0 +1,5 @@
+﻿CREATE TABLE dbo.CategoryGroup(
+  ID        INT IDENTITY(1,1) PRIMARY KEY,
+  GroupName      NVARCHAR(100) NOT NULL UNIQUE,
+  SortOrder INT NOT NULL CONSTRAINT DF_CategoryGroup_Sort DEFAULT(0)
+);
