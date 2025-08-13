@@ -1,2 +1,3 @@
 # FinanceApp
-A simple desktop for personal finance and budgeting.
+A simple desktop application for personal finance and budgeting.
+(vibe coding in action)
