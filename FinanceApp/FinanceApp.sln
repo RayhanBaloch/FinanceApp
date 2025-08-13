@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceAppUI.WPF", "FinanceAppUI.WPF\FinanceAppUI.WPF.csproj", "{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FinanceDB", "FinanceDB\FinanceDB.sqlproj", "{888F48F5-8E34-4703-B8D5-39C8CBF913FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49F3B510-27C2-4143-932B-9C630B048234}
+	EndGlobalSection
+EndGlobal
