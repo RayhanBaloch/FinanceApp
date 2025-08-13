@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceAppUI.WPF", "Finance
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FinanceDB", "FinanceDB\FinanceDB.sqlproj", "{888F48F5-8E34-4703-B8D5-39C8CBF913FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.Core", "FinanceApp.Core\FinanceApp.Core.csproj", "{A24D4825-A8BF-4D63-967B-3C9167DFD76D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.ViewModels", "FinanceApp.ViewModels\FinanceApp.ViewModels.csproj", "{A566C93F-0AE4-4BDF-B6E5-946B8BDCC49C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{888F48F5-8E34-4703-B8D5-39C8CBF913FA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A566C93F-0AE4-4BDF-B6E5-946B8BDCC49C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A566C93F-0AE4-4BDF-B6E5-946B8BDCC49C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A566C93F-0AE4-4BDF-B6E5-946B8BDCC49C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A566C93F-0AE4-4BDF-B6E5-946B8BDCC49C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
