@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Backgrounds\business_tech.jpg" />
+    <None Remove="Images\SideBar\tgBtn_MouseOver.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.8">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +27,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FinanceApp.Core\FinanceApp.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\Logo\" />
+    <Folder Include="Images\PageIcons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Backgrounds\business_tech.jpg" />
+    <Resource Include="Images\SideBar\tgBtn_MouseOver.png" />
   </ItemGroup>
 
 </Project>
