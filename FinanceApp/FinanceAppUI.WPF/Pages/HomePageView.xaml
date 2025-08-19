@@ -1,0 +1,194 @@
+﻿<UserControl x:Class="FinanceAppUI.WPF.Pages.HomePageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FinanceAppUI.WPF.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+
+        <!--Button Borders Style-->
+        <Style x:Key="borderBtn" TargetType="Border">
+            <Setter Property="Background" Value="{StaticResource ForegroundLightBrush}"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Height" Value="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}"/>
+            <Setter Property="CornerRadius" Value="10"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource ForegroundDarkBrush}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="125"/>
+            <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}"/>
+            <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"/>
+
+        </Style>
+
+    </UserControl.Resources>
+
+
+    <Border>
+        <Grid>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Border Background="{StaticResource ForegroundLightBrush}"
+                        CornerRadius="0 0 10 10"
+                        Padding="15,15,15,15"
+                        Margin="20,0,20,20">
+
+                    <Grid Margin="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--Shortcuts Grid-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <!--New Product Button-->
+                            <Border Grid.Row="0" Grid.Column="0" 
+                                    Style="{StaticResource borderBtn}">
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Image Source="/Images/PageIcons/add-product-96-circle.png"
+                                       Stretch="None"
+                                       Margin="0"/>-->
+
+                                    <TextBlock Text="Add Product" 
+                                               Grid.Row="1">
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+
+                            <!--Add Purchase-->
+                            <Border Grid.Row="0" Grid.Column="1"
+                                    Style="{StaticResource borderBtn}">
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Image Source="/Images/PageIcons/buy-96.png"
+                                       Stretch="None"
+                                       Margin="0"/>-->
+                                    <TextBlock Text="Add Purchase"
+                                               Grid.Row="1">
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+
+                            <!--Close the Day-->
+                            <Border Grid.Row="0" Grid.Column="2" 
+                                    Style="{StaticResource borderBtn}"
+                                    >
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Image Source="/Images/PageIcons/close-sign-96.png"
+                                       Stretch="None"
+                                       Margin="0"/>-->
+                                    <TextBlock Text="Close the Day"
+                                               Grid.Row="1">
+
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+
+                            <!--Products List-->
+                            <Border Grid.Row="1" Grid.Column="0" 
+                                    Style="{StaticResource borderBtn}"
+                                    >
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="/Images/PageIcons/icons8-ledger-96.png"
+                                       Margin="0" Stretch="None"/>
+                                    <TextBlock Text="Accounts"
+                                               Grid.Row="1">
+
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+
+                            <!--Purchases-->
+                            <Border Grid.Row="1" Grid.Column="1"
+                                    Style="{StaticResource borderBtn}"
+                                    
+                                    >
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Image Source="/Images/PageIcons/purchase-order-96.png"
+                                       Stretch="None"
+                                       Margin="0"/>-->
+                                    <TextBlock Text="Budget"
+                                               Grid.Row="1">
+
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+
+                            <!--Reports-->
+                            <Border Grid.Row="1" Grid.Column="2"
+                                    Style="{StaticResource borderBtn}"
+                                    
+                                    >
+                                <Grid VerticalAlignment="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<Image Source="/Images/PageIcons/report-96.png"
+                                       Stretch="None"
+                                       Margin="0"/>-->
+                                    <TextBlock Text="Transactions"
+                                               Grid.Row="1">
+
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </Grid>
+
+                        <!--Overview Grid-->
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+
+                    </Grid>
+
+                </Border>
+            </ScrollViewer>
+
+        </Grid>
+    </Border>
+</UserControl>

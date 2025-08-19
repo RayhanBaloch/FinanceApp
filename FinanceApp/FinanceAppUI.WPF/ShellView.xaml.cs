@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace FinanceAppUI.WPF
         public ShellView()
         {
             InitializeComponent();
+            DataContext = App.Services.GetRequiredService<ShellViewModel>();
         }
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)

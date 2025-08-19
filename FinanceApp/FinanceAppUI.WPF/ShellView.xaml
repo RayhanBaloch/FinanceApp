@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinanceAppUI.WPF"
+        xmlns:pages="clr-namespace:FinanceAppUI.WPF.Pages"
         mc:Ignorable="d"
         Height="450" Width="800"
         
@@ -13,6 +14,9 @@
         MinHeight="450" MinWidth="650">
 
     <Window.Resources>
+            <DataTemplate DataType="{x:Type pages:HomePageViewModel}">
+                <pages:HomePageView />
+            </DataTemplate>
 
         <!--// Toggle Button Style Template //-->
 
@@ -160,7 +164,7 @@
 
                 <!-- Page Title -->
                 <TextBlock x:Name="PageTitle" 
-                                   FontSize="{StaticResource FontSizeXXLarge}" 
+                                   FontSize="{StaticResource FontSizeXLarge}" 
                                    FontFamily="{StaticResource LatoRegular}"
                                    Foreground="{StaticResource AppBlueBrush}" />
                 <StackPanel Visibility="Collapsed"
@@ -182,7 +186,7 @@
             </Grid>
         </Border>
 
-        <ContentControl Grid.Column="1" Grid.Row="1" x:Name="ActiveItem" TabIndex="1"/>
+            <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding ActiveItem}"/>
 
         <Grid x:Name="nav_pnl" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"
                   HorizontalAlignment="Left"

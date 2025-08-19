@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="Images\Backgrounds\business_tech.jpg" />
+    <None Remove="Images\PageIcons\icons8-ledger-64.png" />
+    <None Remove="Images\PageIcons\icons8-ledger-96.png" />
     <None Remove="Images\SideBar\tgBtn_MouseOver.png" />
   </ItemGroup>
 
@@ -31,11 +33,12 @@
 
   <ItemGroup>
     <Folder Include="Images\Logo\" />
-    <Folder Include="Images\PageIcons\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\Backgrounds\business_tech.jpg" />
+    <Resource Include="Images\PageIcons\icons8-ledger-64.png" />
+    <Resource Include="Images\PageIcons\icons8-ledger-96.png" />
     <Resource Include="Images\SideBar\tgBtn_MouseOver.png" />
   </ItemGroup>
 
