@@ -1,7 +1,0 @@
-﻿CREATE TABLE dbo.BudgetMonth(
-  ID        INT IDENTITY(1,1) PRIMARY KEY,
-  [Year]    INT NOT NULL,
-  [Month]   TINYINT NOT NULL CHECK ([Month] BETWEEN 1 AND 12),
-  CreatedAt DATETIME2(0) NOT NULL CONSTRAINT DF_BudgetMonth_Created DEFAULT (SYSUTCDATETIME()),
-  CONSTRAINT UQ_BudgetMonth UNIQUE ([Year],[Month])
-);
