@@ -17,10 +17,9 @@ namespace FinanceAppUI.WPF
     /// </summary>
     public partial class MainWindow
     {
-        private MainWindowViewModel ViewModel { get; }
         public MainWindow(MainWindowViewModel viewModel)
         {
-            DataContext = ViewModel = viewModel;
+            DataContext = viewModel;
             InitializeComponent();
         }
 
