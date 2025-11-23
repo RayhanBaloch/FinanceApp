@@ -1,6 +1,12 @@
-﻿using System.Configuration;
+﻿using CommunityToolkit.Mvvm.Messaging;
+using MaterialDesignThemes.Wpf;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.Configuration;
 using System.Data;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace FinanceAppUI.WPF
 {
@@ -9,15 +15,41 @@ namespace FinanceAppUI.WPF
     /// </summary>
     public partial class App : Application
     {
-        protected override void OnStartup(StartupEventArgs e)
+        [STAThread]
+        public static void Main(string[] args)
         {
-            base.OnStartup(e);
+            using IHost host = CreateHostBuilder(args).Build();
+            host.Start();
 
-            // Setup your DI container here
-            var viewModel = new MainWindowViewModel(); // or resolve from DI container
-            var mainWindow = new MainWindow(viewModel);
-            mainWindow.Show();
+            App app = new();
+            app.InitializeComponent();
+            app.MainWindow = host.Services.GetRequiredService<MainWindow>();
+            app.MainWindow.Visibility = Visibility.Visible;
+            app.Run();
         }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+        .ConfigureAppConfiguration((hostBuilderContext, configurationBuilder)
+            => configurationBuilder.AddUserSecrets(typeof(App).Assembly))
+        .ConfigureServices((hostContext, services) =>
+        {
+            services.AddSingleton<MainWindow>();
+            services.AddSingleton<MainWindowViewModel>();
+            
+            
+
+            services.AddSingleton<WeakReferenceMessenger>();
+            services.AddSingleton<IMessenger, WeakReferenceMessenger>(provider => provider.GetRequiredService<WeakReferenceMessenger>());
+
+            services.AddSingleton(_ => Current.Dispatcher);
+
+            services.AddTransient<ISnackbarMessageQueue>(provider =>
+            {
+                Dispatcher dispatcher = provider.GetRequiredService<Dispatcher>();
+                return new SnackbarMessageQueue(TimeSpan.FromSeconds(2.0), dispatcher);
+            });
+        });
     }
 
 }
