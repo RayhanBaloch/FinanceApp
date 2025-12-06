@@ -36,9 +36,6 @@ namespace FinanceAppUI.WPF
         {
             services.AddSingleton<MainWindow>();
             services.AddSingleton<MainWindowViewModel>();
-            
-            
-
             services.AddSingleton<WeakReferenceMessenger>();
             services.AddSingleton<IMessenger, WeakReferenceMessenger>(provider => provider.GetRequiredService<WeakReferenceMessenger>());
 

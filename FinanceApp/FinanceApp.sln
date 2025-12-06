@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36408.4
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11222.15 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceAppUI.WPF", "FinanceAppUI.WPF\FinanceAppUI.WPF.csproj", "{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceApp.Core", "FinanceApp.Core\FinanceApp.Core.csproj", "{A24D4825-A8BF-4D63-967B-3C9167DFD76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{138C6DE3-7F60-44E6-BE51-B3D3EB63EEE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A24D4825-A8BF-4D63-967B-3C9167DFD76D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
